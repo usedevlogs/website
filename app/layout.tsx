@@ -1,10 +1,10 @@
-import type { Viewport } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import './globals.css';
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
+export const metadata: Metadata = {
+  title: 'devlog — AI-powered dev session manager',
+  description: 'Write structured journal entries to Obsidian automatically after every Claude Code session',
+};
 
 export default function RootLayout({
   children,
@@ -13,11 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>devlog — AI-powered dev session manager</title>
-        <meta name="description" content="Write structured journal entries to Obsidian automatically after every Claude Code session" />
-      </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }
